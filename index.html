@@ -64,6 +64,21 @@
         p.style.color = prompt("Set Text Color ...", "black");
       }
     </script>
-    <button onclick="settextcolor">Color</button>
+    <script>
+      const toggle_btn = document.querySelector("#checkbox");
+      console.log(toggle_btn);
+
+      toggle_btn.addEventListener("change", () => {
+        if (toggle_btn.checked) {
+          console.log("toggle_btn checked");
+
+          document.body.style = "color:white;background:black;";
+        } else {
+          console.log("toggle_btn un - checked");
+
+          document.body.style = "color:black;background:white;";
+        }
+      });
+    </script>
   </body>
 </html>
